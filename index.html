@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover everyday plants, learn how to care for them, and connect with local nurseries." />
+  <title>Digital Nursery | Discover. Grow. Connect.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Digital Nursery home">
+      <span class="brand-mark">✿</span>
+      <span>digital<span class="brand-light">nursery</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#plants">Explore plants</a>
+      <a href="#nurseries">Nurseries</a>
+      <a href="#sdgs">Our impact</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#nurseries">Find a nursery <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> A greener home starts here</div>
+        <h1>Make room for<br><em>a little more green.</em></h1>
+        <p class="hero-description">Discover everyday plants, learn simple care tips, and connect directly with nurseries in your community.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#plants">Explore plants <span>→</span></a>
+          <a class="button button-secondary" href="#nurseries">Find local nurseries</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✓</span> Practical plant knowledge. Local connections. Greener communities.</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image-frame">
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1100&q=85" alt="Sunlit green plants and flowers" />
+        </div>
+        <div class="floating-card plant-float">
+          <span class="float-icon">🌱</span>
+          <div><strong>Grow at your pace</strong><small>One plant at a time</small></div>
+        </div>
+        <div class="hero-stamp"><span>GROW</span><span>GREEN</span><span>TOGETHER</span></div>
+        <div class="decor-leaf decor-leaf-one">✳</div>
+        <div class="decor-leaf decor-leaf-two">✿</div>
+      </div>
+    </section>
+
+    <section class="quick-facts section-wrap" aria-label="What this website offers">
+      <div class="fact"><span class="fact-icon">🌿</span><div><strong>Plant guides</strong><small>Simple, useful care advice</small></div></div>
+      <div class="fact"><span class="fact-icon">📍</span><div><strong>Local nurseries</strong><small>Find and contact vendors</small></div></div>
+      <div class="fact"><span class="fact-icon">🌍</span><div><strong>Greener communities</strong><small>Learn, plant and nurture</small></div></div>
+    </section>
+
+    <section class="content-section section-wrap" id="plants">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">A little plant knowledge</div>
+          <h2>Meet your everyday greens<span class="heading-period">.</span></h2>
+          <p>Explore popular plants and learn what helps them thrive.</p>
+        </div>
+        <a class="text-link desktop-link" href="#plantsGrid">Browse all plants <span>→</span></a>
+      </div>
+      <div class="filter-bar">
+        <label class="search-box"><span>⌕</span><input id="plantSearch" type="search" placeholder="Search plants..." aria-label="Search plants" /></label>
+        <div class="filter-chips" id="plantFilters" aria-label="Filter plants by category">
+          <button class="chip active" data-category="All">All plants</button>
+          <button class="chip" data-category="Medicinal">Medicinal</button>
+          <button class="chip" data-category="Fruits">Fruits</button>
+          <button class="chip" data-category="Showpiece">Showpiece</button>
+          <button class="chip" data-category="Flowering">Flowering</button>
+          <button class="chip" data-category="Fruit & Culinary">Fruit & Culinary</button>
+        </div>
+      </div>
+      <div class="plant-grid" id="plantsGrid"></div>
+      <p class="empty-state hidden" id="plantEmpty">No plants match your search. Try another name or category.</p>
+      <div class="mobile-browse"><a class="text-link" href="#plantsGrid">Browse plants <span>→</span></a></div>
+    </section>
+
+    <section class="nursery-section" id="nurseries">
+      <div class="section-wrap">
+        <div class="section-heading nursery-heading">
+          <div>
+            <div class="eyebrow eyebrow-light">Rooted in your community</div>
+            <h2>Good plants. <em>Local people.</em></h2>
+            <p>Find a nursery, check its details, and contact the vendor directly.</p>
+          </div>
+          <div class="nursery-count"><strong id="nurseryCount">0</strong><span>nurseries listed</span></div>
+        </div>
+        <div class="nursery-tools">
+          <label class="search-box search-box-light"><span>⌕</span><input id="nurserySearch" type="search" placeholder="Search by nursery or area..." aria-label="Search nurseries" /></label>
+          <span class="directory-note">Directory information can be updated as your project grows.</span>
+        </div>
+        <div class="nursery-grid" id="nurseriesGrid"></div>
+        <p class="empty-state empty-state-light hidden" id="nurseryEmpty">No nurseries found. Try a different search.</p>
+      </div>
+    </section>
+
+    <section class="impact-section section-wrap" id="sdgs">
+      <div class="impact-copy">
+        <div class="eyebrow">Small actions, shared impact</div>
+        <h2>A greener future<br>grows <em>from home.</em></h2>
+        <p>Digital Nursery makes plant knowledge easier to access and helps people discover local nursery vendors. Together, these small steps can encourage greener homes and more plant-friendly communities.</p>
+        <a class="text-link" href="#about">Learn about our project <span>→</span></a>
+      </div>
+      <div class="sdg-cards">
+        <article class="sdg-card sdg-11">
+          <div class="sdg-number">11</div>
+          <div class="sdg-icon">🏙️</div>
+          <h3>Sustainable Cities<br>& Communities</h3>
+          <p>Encouraging greener homes and more sustainable local communities.</p>
+          <span class="sdg-label">Primary SDG</span>
+        </article>
+        <article class="sdg-card sdg-15">
+          <div class="sdg-number">15</div>
+          <div class="sdg-icon">🌳</div>
+          <h3>Life<br>on Land</h3>
+          <p>Building awareness about plants and the importance of caring for nature.</p>
+          <span class="sdg-label">Supporting SDG</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="section-wrap about-inner">
+        <div class="about-symbol">✿</div>
+        <div class="about-copy">
+          <div class="eyebrow">About the community project</div>
+          <h2>Helping plant lovers and local nurseries find each other.</h2>
+          <p>Digital Nursery is a community engagement project designed to share easy-to-understand information about common household plants and make local nursery details easier to find. Instead of selling or shipping plants online, the platform helps visitors learn about plants and connect with vendors directly.</p>
+          <div class="project-flow">
+            <span>Community feedback</span><b>→</b><span>Plant awareness</span><b>→</b><span>Local connections</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta section-wrap">
+      <div>
+        <div class="eyebrow">Your next green step</div>
+        <h2>Ready to grow something?</h2>
+        <p>Start with one plant. Learn what it needs. Help your space thrive.</p>
+      </div>
+      <a class="button button-primary" href="#plants">Find your plant <span>→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">✿</span><span>digital<span class="brand-light">nursery</span></span></a>
+      <p>Discover plants. Connect locally. Grow greener.</p>
+      <span class="copyright">Community Engagement Project · <span id="year"></span></span>
+    </div>
+    <details class="image-credits section-wrap">
+      <summary>Plant image credits</summary>
+      <ul id="imageCredits"></ul>
+    </details>
+  </footer>
+
+  <dialog class="plant-dialog" id="plantDialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close plant details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
